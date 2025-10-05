@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Prompt", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/*  Layout หลัก */
+.container {
+  display: flex;
+  flex-direction: column; /* แบ่งเป็น Header / Content / Footer ตามแนวตั้ง */
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff6a00, #ff8c1a);
+  color: #fff;
+  padding: 0 30px;
+  height: 80px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* กลุ่มซ้าย (ปุ่ม + ชื่อ) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* ระยะห่างระหว่างปุ่มกับชื่อ */
+}
+
+/* ชื่อหัวข้อ */
+.header-title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* โปรไฟล์ด้านขวา */
+.header-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* ปุ่มสามขีด */
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  z-index: 1100;
+}
+.menu-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar — เปิด/ปิดได้ทุกขนาดจอ */
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 60px;
+  width: 280px;
+  background: #fff;
+  border-right: 1px solid #d0d0d0;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  z-index: 1000;
+}
+
+.sidebar.hide {
+  transform: translateX(-100%);
+}
+
+.sidebar p {
+  margin: 14px 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;       /* ไม่ตัดคำลงบรรทัดใหม่ */
+  overflow: hidden;          /* ซ่อนข้อความส่วนเกิน */
+  text-overflow: ellipsis;   /* แสดง … เมื่อข้อความเกินพื้นที่ */
+}
+
+.sidebar p:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+.sidebar a{
+  text-decoration: none;
+}
+/* Main */
+.main {
+  flex: 1;
+  padding: 40px;
+  background: #fafafa;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+  margin-left: 280px; /* ระยะเผื่อ sidebar */
+}
+
+.main.full {
+  margin-left: 0;
+}
+
+.form-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* 📝 ฟอร์มประเมิน */
+.project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+/* grid 2 คอลัมน์ */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 35px;
+  margin-bottom: 20px;
+}
+
+/* label + input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* textarea */
+.form-group textarea {
+  width: 100%;
+  height: 90px;
+  padding: 12px 16px;
+  border: 1.8px solid #ddd;
+  background: #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group textarea:focus {
+  border-color: #ff6a00;
+  box-shadow: 0 0 4px rgba(255,106,0,0.4);
+  outline: none;
+}
+
+
+/* ปุ่มบันทึก */
+.btn-save {
+  display: block;
+  width: 220px;
+  padding: 14px;
+  margin: 25px auto 0;
+  background: linear-gradient(90deg, limegreen, #2ecc71);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+}
+
+.btn-save:hover {
+  background: linear-gradient(90deg, #2ecc71, limegreen);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+.footer {
+  height: 60px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #555;
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+/*  Responsive */
+@media (max-width: 1024px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .main {
+    padding: 25px;
+  }
+}
+/* ลดขนาด Sidebar เมื่อจอเล็ก */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main {
+    margin-left: 200px; /* ระยะตาม sidebar */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px; /* ย่อเพิ่มเมื่อจอแคบมาก */
+  }
+
+  .main {
+    margin-left: 180px;
+    padding: 25px; /* ลด padding ให้อ่านง่ายในมือถือ */
+  }
+
+  .header-title {
+    font-size: 20px; /* ย่อขนาดข้อให้เหมาะกับหน้าจอ */
+  }
+}

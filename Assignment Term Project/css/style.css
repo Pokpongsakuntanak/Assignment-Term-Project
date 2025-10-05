@@ -1,0 +1,328 @@
+/* เสนอหัวข้อโครงงาน */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #FFFFFF;
+
+
+/* Rectangle 6 */
+
+{
+    position: absolute;
+    width: 1440px;
+    height: 146px;
+    left: 0px;
+    top: 0px;
+
+    background: #FF8000;
+
+}
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 400px;
+height: 878px;
+left: 0px;
+top: 146px;
+
+background: #DBDBDB;
+
+
+/* เสนอหัวข้อโครงงาน */
+
+position: absolute;
+width: 269px;
+height: 74px;
+left: 70px;
+top: 191px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* ติดตามโครงงานพิเศษ */
+
+position: absolute;
+width: 487px;
+height: 83px;
+left: 37px;
+top: 33px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 52px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+
+
+
+/* Ellipse 1 */
+
+position: absolute;
+width: 75px;
+height: 70px;
+left: 1331px;
+top: 37px;
+
+background: url(76f3f3007969fd3b6db21c744e1ef289);
+
+
+/* ยื่นสอบหัวข้อ */
+
+position: absolute;
+width: 269px;
+height: 74px;
+left: 70px;
+top: 339px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* สถานะโครงงาน */
+
+position: absolute;
+width: 269px;
+height: 74px;
+left: 70px;
+top: 413px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* ความก้าวหน้าโครงงาน */
+
+position: absolute;
+width: 307px;
+height: 74px;
+left: 70px;
+top: 265px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* เสนอหัวข้อโครงงาน */
+
+position: absolute;
+width: 524px;
+height: 63px;
+left: 439px;
+top: 196px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 52px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* หัวข้อโครงงาน(ไทย) */
+
+position: absolute;
+width: 263px;
+height: 41px;
+left: 438px;
+top: 274px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 979px;
+height: 62px;
+left: 439px;
+top: 327px;
+
+background: #D9D9D9;
+
+
+/* อาจารย์ที่ปรึกษา */
+
+position: absolute;
+width: 263px;
+height: 41px;
+left: 439px;
+top: 401px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Rectangle 9 */
+
+position: absolute;
+width: 979px;
+height: 62px;
+left: 440px;
+top: 454px;
+
+background: #D9D9D9;
+
+
+/* รายละเอียดโครงงาน */
+
+position: absolute;
+width: 264px;
+height: 41px;
+left: 440px;
+top: 538px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Rectangle 10 */
+
+position: absolute;
+width: 979px;
+height: 62px;
+left: 441px;
+top: 591px;
+
+background: #D9D9D9;
+
+
+/* สมาชิกโครงงาน */
+
+position: absolute;
+width: 263px;
+height: 41px;
+left: 441px;
+top: 665px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 42px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Rectangle 11 */
+
+position: absolute;
+width: 976px;
+height: 62px;
+left: 442px;
+top: 718px;
+
+background: #D9D9D9;
+
+
+/* Botton */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 381px;
+height: 83px;
+left: 438px;
+top: 830px;
+
+background: #00E300;
+border-radius: 45px;
+
+
+/* บันทึก */
+
+width: 83px;
+height: 42px;
+
+font-family: 'Sarabun';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 42px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;

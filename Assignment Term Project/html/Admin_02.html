@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดตามโครงการพิเศษ</title>
+  <link rel="stylesheet" href="/css/admin_02.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <!-- ✅ กลุ่มซ้าย: ปุ่มสามขีด + ชื่อระบบ -->
+      <div class="header-left">
+        <div class="menu-icon" id="menuToggle">☰</div>
+        <div class="header-title">ติดตามโครงการพิเศษ</div>
+      </div>
+
+      <!-- โปรไฟล์ด้านขวา -->
+      <div class="header-profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="profile">
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav>
+        <a href="Admin_01.html"><p>ตรวจโครงการ</p></a>
+        <a href="Admin_02.html"><p>ระบุวันสอบ</p></a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+     <!-- Main content -->
+    <main class="main">
+      <h2 class="form-title">ระบุวันสอบ</h2>
+
+      <form class="exam-form">
+        <div class="form-group">
+          <label for="committee1">กรรมการท่านที่ 1:</label>
+          <input type="text" id="committee1" name="committee1">
+        </div>
+
+        <div class="form-group">
+          <label for="committee2">กรรมการท่านที่ 2:</label>
+          <input type="text" id="committee2" name="committee2">
+        </div>
+
+        <div class="form-group">
+          <label for="committee3">กรรมการท่านที่ 3:</label>
+          <input type="text" id="committee3" name="committee3">
+        </div>
+
+        <div class="form-group">
+          <label for="advisor">อาจารย์ที่ปรึกษาร่วม:</label>
+          <input type="text" id="advisor" name="advisor">
+        </div>
+
+        <div class="form-group">
+          <label for="examDate">ระบุวันสอบโดยเจ้าหน้าที่ (วัน/เดือน/ปี):</label>
+          <input type="text" id="examDate" name="examDate" placeholder="วัน/เดือน/ปี">
+        </div>
+
+        <div class="form-group">
+          <label for="room">ห้องยื่นสอบ:</label>
+          <input type="text" id="room" name="room">
+        </div>
+
+        <button type="submit" class="btn-save">บันทึก</button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 ระบบติดตามโครงการพิเศษ
+    </footer>
+  </div>
+
+  <!-- ✅ สคริปต์ควบคุมการเปิด/ปิด sidebar -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const main = document.querySelector('.main');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('hide');
+      main.classList.toggle('full');
+    });
+  </script>
+</body>
+</html>

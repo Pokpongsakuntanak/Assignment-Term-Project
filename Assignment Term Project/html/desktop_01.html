@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดตามโครงการพิเศษ</title>
+  <link rel="stylesheet" href="desktop_01.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <!-- ✅ กลุ่มซ้าย: ปุ่มสามขีด + ชื่อระบบ -->
+      <div class="header-left">
+        <div class="menu-icon" id="menuToggle">☰</div>
+        <div class="header-title">ติดตามโครงการพิเศษ</div>
+      </div>
+
+      <!-- โปรไฟล์ด้านขวา -->
+      <div class="header-profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="profile">
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav>
+        <p>ตรวจโครงการ</p>
+        <p>ระบุวันสอบ</p>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <h2 class="form-title">ประเมินโครงงาน</h2>
+
+      <form class="project-form">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="week1">สัปดาห์ที่ 1</label>
+            <textarea id="week1" name="week1"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="comment1">ข้อเสนอแนะ</label>
+            <textarea id="comment1" name="comment1"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="week2">สัปดาห์ที่ 2</label>
+            <textarea id="week2" name="week2"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="comment2">ข้อเสนอแนะ</label>
+            <textarea id="comment2" name="comment2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="week3">สัปดาห์ที่ 3</label>
+            <textarea id="week3" name="week3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="comment3">ข้อเสนอแนะ</label>
+            <textarea id="comment3" name="comment3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="week4">สัปดาห์ที่ 4</label>
+            <textarea id="week4" name="week4"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="comment4">ข้อเสนอแนะ</label>
+            <textarea id="comment4" name="comment4"></textarea>
+          </div>
+        </div>
+
+        <div class="radio-group">
+          <label><input type="radio" name="result" value="pass"> สอบผ่าน</label>
+          <label><input type="radio" name="result" value="fail"> สอบไม่ผ่าน</label>
+          <label><input type="radio" name="result" value="fix"> สอบผ่านแบบแก้ไข</label>
+        </div>
+
+        <div class="file-upload">
+          <label for="file">ไฟล์ที่แก้ไข:</label>
+          <input type="file" id="file" name="file">
+        </div>
+
+        <button type="submit" class="btn-save">บันทึก</button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 ระบบติดตามโครงการพิเศษ
+    </footer>
+  </div>
+
+  <!-- สคริปต์ควบคุมการเปิด/ปิด sidebar -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const main = document.querySelector('.main');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('hide');
+      main.classList.toggle('full');
+    });
+  </script>
+</body>
+</html>

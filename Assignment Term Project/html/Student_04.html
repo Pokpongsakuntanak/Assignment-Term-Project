@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดตามโครงการพิเศษ</title>
+  <link rel="stylesheet" href="/css/student_04.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <!-- ✅ กลุ่มซ้าย: ปุ่มสามขีด + ชื่อระบบ -->
+      <div class="header-left">
+        <div class="menu-icon" id="menuToggle">☰</div>
+        <div class="header-title">ติดตามโครงการพิเศษ</div>
+      </div>
+
+      <!-- โปรไฟล์ด้านขวา -->
+      <div class="header-profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="profile">
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav>
+        <a href="Student_01.html"><p>เสนอหัวข้อโครงงาน</p></a>
+        <a href="Student_02.html"><p>ความก้าวหน้าโครงงาน</p></a>
+        <a href="Student_03.html"><p>ยื่นสอบหัวข้อ</p></a>
+        <a href="Student_04.html"><p>สถานะโครงงาน</p></a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <h2 class="form-title">สถานะโครงงาน</h2>
+      <div class="progress-container">
+        <div class="progress-bar">
+        <div class="progress-fill">90%</div>
+      </div><br>
+      <h3 class="">ข้อคิดเห็นอาจารย์</h3>
+      <form>
+            <div class="radio-group">
+                <label><input type="radio" name="result" value="pass"> สอบผ่าน</label><br>
+                <label><input type="radio" name="result" value="fail"> สอบไม่ผ่าน</label><br>
+                <label><input type="radio" name="result" value="fix"> สอบผ่านแบบแก้ไข</label><br>
+            </div>
+            <div class="file-upload">
+                <label for="file">ไฟล์ที่แก้ไข:</label>
+                <input type="file" id="file" name="file">
+            </div>
+            <button type="submit" class="btn-save">บันทึก</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 ระบบติดตามโครงการพิเศษ
+    </footer>
+  </div>
+
+  <!-- สคริปต์ควบคุมการเปิด/ปิด sidebar -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const main = document.querySelector('.main');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('hide');
+      main.classList.toggle('full');
+    });
+  </script>
+</body>
+</html>

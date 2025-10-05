@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* ✅ ปรับจาก center เป็นเรียงแนวตั้งปกติ */
+}
+
+/* ---------- Layout หลัก ---------- */
+.container {
+  display: grid;
+  grid-template-areas:
+    "left right"
+    "footer footer";
+  grid-template-columns: 0.7fr 1.3fr;     /* ✅ ซ้าย 40% ขวา 60% */
+  grid-template-rows: 1fr auto;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;                      /* ✅ ดันเต็มหน้าจอแนวตั้ง */
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  border-radius: 0;
+}
+
+/* ---------- ส่วนซ้าย (ภาพพื้นหลัง) ---------- */
+.left {
+  grid-area: left;
+  background: url("/images/loginimg.jpg") no-repeat center center / cover;
+  position: relative;
+}
+
+/* ✅ ทำให้ภาพดูสว่างชัดขึ้น */
+.left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+/* ---------- ส่วนขวา (ฟอร์ม) ---------- */
+.right {
+  grid-area: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  z-index: 3;
+  padding: 80px;
+}
+
+/* ---------- กล่องฟอร์ม ---------- */
+.login-box {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  padding: 50px 60px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.login-box img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.login-box h2 {
+  font-size: clamp(16px, 2vw, 20px);
+  color: #c9302c;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---------- ช่องกรอกข้อมูล ---------- */
+.login-box input,
+.login-box select {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* ---------- ปุ่ม ---------- */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #32cd32, #27ae60);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(50, 205, 50, 0.3);
+}
+
+.login-box button:hover {
+  background: linear-gradient(90deg, #2ecc71, #1e8449);
+  box-shadow: 0 5px 15px rgba(50, 205, 50, 0.4);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  grid-area: footer;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+
+.admin {
+  text-decoration: none;
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .left {
+    display: none;
+  }
+  
+  .container {
+    grid-template-areas:
+      "right"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    width: 95%;
+    min-height: 100vh;
+  }
+
+  .right {
+    padding: 40px 20px;
+  }
+
+  .login-box {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    width: 95%;
+    max-width: 400px;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ติดตามโครงการพิเศษ</title>
+  <link rel="stylesheet" href="/css/student_01.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <!-- กลุ่มซ้าย: ปุ่มสามขีด + ชื่อระบบ -->
+      <div class="header-left">
+        <div class="menu-icon" id="menuToggle">☰</div>
+        <div class="header-title">ติดตามโครงการพิเศษ</div>
+      </div>
+
+      <!-- โปรไฟล์ด้านขวา -->
+      <div class="header-profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="profile">
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <nav>
+        <a href="Student_01.html"><p>เสนอหัวข้อโครงงาน</p></a>
+        <a href="Student_02.html"><p>ความก้าวหน้าโครงงาน</p></a>
+        <a href="Student_03.html"><p>ยื่นสอบหัวข้อ</p></a>
+        <a href="Student_04.html"><p>สถานะโครงงาน</p></a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+        <!-- Main content -->
+    <main class="main">
+      <h2 class="form-title">เสนอหัวข้อโครงงาน</h2>
+
+      <form class="project-propose-form">
+        <div class="form-group">
+          <label for="th_title">หัวข้อโครงงาน (ไทย)</label>
+          <input type="text" id="th_title" name="th_title">
+        </div>
+
+        <div class="form-group">
+          <label for="en_title">หัวข้อโครงงาน (อังกฤษ)</label>
+          <input type="text" id="en_title" name="en_title">
+        </div>
+
+        <div class="form-group">
+          <label for="advisor">อาจารย์ที่ปรึกษา</label>
+          <input type="text" id="advisor" name="advisor">
+        </div>
+
+        <div class="form-group">
+          <label for="detail">รายละเอียดโครงงาน</label>
+          <textarea id="detail" name="detail" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="members">สมาชิกโครงงาน</label>
+          <textarea id="members" name="members" rows="2"></textarea>
+        </div>
+
+        <button type="submit" class="btn-save">บันทึก</button>
+      </form>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      © 2025 ระบบติดตามโครงการพิเศษ
+    </footer>
+  </div>
+
+  <!-- ✅ สคริปต์ควบคุมการเปิด/ปิด sidebar -->
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const main = document.querySelector('.main');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('hide');
+      main.classList.toggle('full');
+    });
+  </script>
+</body>
+</html>

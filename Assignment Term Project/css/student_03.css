@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');/* 🎨 Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Prompt", sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* 🧩 Layout หลัก */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff6a00, #ff8c1a);
+  color: #fff;
+  padding: 0 30px;
+  height: 80px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* กลุ่มซ้าย (ปุ่ม + ชื่อ) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-title {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* โปรไฟล์ด้านขวา */
+.header-profile img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* 🍔 ปุ่มสามขีด */
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  transition: background 0.3s;
+  z-index: 1100;
+}
+.menu-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🧭 Sidebar */
+.sidebar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 60px;
+  width: 280px;
+  background: #fff;
+  border-right: 1px solid #d0d0d0;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  z-index: 1000;
+}
+
+.sidebar.hide {
+  transform: translateX(-100%);
+}
+
+.sidebar p {
+  margin: 14px 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar p:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+.sidebar a{
+  text-decoration: none;
+}
+
+/* 📄 Main */
+.main {
+  flex: 1;
+  padding: 40px;
+  background: #fafafa;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+  margin-left: 280px;
+}
+
+.main.full {
+  margin-left: 0;
+}
+
+.form-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+/* 🧾 ฟอร์มระบุวันสอบ */
+.exam-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.exam-form .form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exam-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.exam-form input {
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  background: #e0e0e0;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.exam-form input:focus {
+  background: #fff;
+  border-color: #ff6a00;
+  outline: none;
+}
+
+/* ปุ่มบันทึก */
+.btn-save {
+  display: block;
+  width: 180px;
+  padding: 12px;
+  margin: 25px auto 0;
+   background: linear-gradient(90deg, limegreen, #2ecc71);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-save:hover {
+  background: linear-gradient(90deg, #2ecc71, limegreen);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+.footer {
+  height: 60px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #555;
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .main {
+    padding: 25px;
+    margin-left: 200px;
+  }
+  .sidebar {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 25px;
+    margin-left: 180px;
+  }
+  .sidebar {
+    width: 180px;
+  }
+  .header-title {
+    font-size: 20px;
+  }
+}
